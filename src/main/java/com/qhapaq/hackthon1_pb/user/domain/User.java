@@ -1,8 +1,12 @@
 package com.qhapaq.hackthon1_pb.user.domain;
 
 import com.qhapaq.hackthon1_pb.company.domain.Company;
+import com.qhapaq.hackthon1_pb.requestLog.domain.RequestLog;
+import com.qhapaq.hackthon1_pb.userLimit.domain.UserLimit;
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
+
 import java.util.List;
 
 @Entity
