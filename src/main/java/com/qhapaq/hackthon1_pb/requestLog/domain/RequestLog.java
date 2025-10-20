@@ -1,5 +1,6 @@
 package com.qhapaq.hackthon1_pb.requestLog.domain;
 
+import com.qhapaq.hackthon1_pb.aimodel.domain.AIModel;
 import com.qhapaq.hackthon1_pb.user.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,7 +34,7 @@ public class RequestLog {
             joinColumns = @JoinColumn(name = "request_log_id"),
             inverseJoinColumns = @JoinColumn(name = "ai_model_id")
     )
-    private AiModel model;
+    private List<AIModel> AImodels;
 
     private String query;
 

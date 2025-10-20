@@ -38,5 +38,4 @@ public class UserLimit {
     private Long tokenUsed;
 
     private Integer requestMade;
-
 }

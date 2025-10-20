@@ -1,7 +1,10 @@
 package com.qhapaq.hackthon1_pb.aimodel.domain;
 
+import com.qhapaq.hackthon1_pb.requestLog.domain.RequestLog;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "ai_models")
@@ -33,4 +36,7 @@ public class AIModel {
 
     @Column(nullable = true)
     private boolean active;
+
+    @ManyToMany(mappedBy = "AImodels")
+    private List<RequestLog> requestLogs;
 }
