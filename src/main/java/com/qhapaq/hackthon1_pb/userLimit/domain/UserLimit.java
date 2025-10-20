@@ -1,12 +1,12 @@
 package com.qhapaq.hackthon1_pb.userLimit.domain;
 
+import com.qhapaq.hackthon1_pb.restriction.domain.Restriction;
 import com.qhapaq.hackthon1_pb.user.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.sql.Restriction;
 
 @Entity
 @AllArgsConstructor
@@ -35,6 +35,8 @@ public class UserLimit {
 
     private Integer requestLimit;
 
-    private Long token; 
+    private Long tokenUsed;
+
+    private Integer requestMade;
 
 }
